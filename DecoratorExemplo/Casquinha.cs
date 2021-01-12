@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DecoratorExemplo.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DecoratorExemplo
 {
-    public class Casquinha
+    public class Casquinha : ICasquinha
     {
         public string BuscarCasquinha()
         {
