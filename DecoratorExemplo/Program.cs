@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DecoratorExemplo.ConcreteDecorator;
+using DecoratorExemplo.Interfaces;
+using System;
 
 namespace DecoratorExemplo
 {
@@ -6,7 +8,13 @@ namespace DecoratorExemplo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ICasquinha casquinha = new Casquinha();
+            ICasquinha chocolateDecorator = new BolaChocolateDecorator(casquinha);
+            ICasquinha baunilhaDecorator = new BolaBaunilhaDecorator(chocolateDecorator);
+            ICasquinha morangoDecorator = new BolaMorangoDecorator(baunilhaDecorator);
+
+            Console.WriteLine(morangoDecorator.BuscarCasquinha());
+            Console.WriteLine();
         }
     }
 }

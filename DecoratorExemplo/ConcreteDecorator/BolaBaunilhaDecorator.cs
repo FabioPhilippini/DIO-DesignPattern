@@ -12,10 +12,11 @@ namespace DecoratorExemplo.ConcreteDecorator
         {
         }
 
-        public virtual string BuscarCasquinha()
+        //ter esquecido de trocar o virtual para override fez qua a saida só mostrasse o "com bola sabor chocolate"
+        public override string BuscarCasquinha()
         {
-            var casquinha = base.BuscarCasquinha();
-            casquinha += "\r\n com bola sabor chocolate";
+            string casquinha = base.BuscarCasquinha();
+            casquinha += "\r\n    com bola sabor baunilha";
             return casquinha;
         }
     }

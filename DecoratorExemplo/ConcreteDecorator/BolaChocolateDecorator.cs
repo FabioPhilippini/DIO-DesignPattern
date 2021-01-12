@@ -14,8 +14,8 @@ namespace DecoratorExemplo.ConcreteDecorator
 
         public override string BuscarCasquinha()
         {
-            var casquinha = base.BuscarCasquinha();
-            casquinha += "\r\n com bola sabor chocolate";
+            string casquinha = base.BuscarCasquinha();
+            casquinha += "\r\n    com bola sabor chocolate";
             return casquinha;
         }
 

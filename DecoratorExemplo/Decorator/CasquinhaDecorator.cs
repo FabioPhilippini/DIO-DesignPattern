@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DecoratorExemplo.Decorator
 {
-    public class CasquinhaDecorator
+    public class CasquinhaDecorator : ICasquinha
     {
         private readonly ICasquinha _casquinha;
 
@@ -15,7 +15,7 @@ namespace DecoratorExemplo.Decorator
         }
         public virtual string BuscarCasquinha()
         {
-            var casquinha = _casquinha.BuscarCasquinha();
+            string casquinha = _casquinha.BuscarCasquinha();
             return casquinha;
         }
     }
